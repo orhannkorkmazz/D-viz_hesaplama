@@ -51,7 +51,7 @@ class Pencere(QtWidgets.QWidget):
         girilen_miktar=float(text1)
         try:
             sonuc = json_veri['rates'][girilen_döviz] * girilen_miktar
-            self.yazi_alani3.setText(str(sonuc))
+            self.yazi_alani3.setText("Çevrilen miktarın karşılığı:"+str(sonuc))
         except KeyError:
             self.yazi_alani3.setText("Lütfen uygun değerler girdiğinizden emin olun")
     def usd_hesapla(self):
@@ -66,7 +66,7 @@ class Pencere(QtWidgets.QWidget):
         girilen_miktar=float(text1)
         try:
             sonuc = json_veri['rates'][girilen_döviz] * girilen_miktar
-            self.yazi_alani3.setText(str(sonuc))
+            self.yazi_alani3.setText("Çevrilen miktarın karşılığı:"+str(sonuc))
         except KeyError:
             self.yazi_alani3.setText("Lütfen uygun değerler girdiğinizden emin olun")
         
